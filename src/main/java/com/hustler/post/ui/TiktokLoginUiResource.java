@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @Slf4j
 @RestController
-@RequestMapping("/facebook")
+@RequestMapping("/tiktok")
 public class TiktokLoginUiResource {
     @PostMapping("/login")
     public void initiateLogin(@RequestBody String body) {
