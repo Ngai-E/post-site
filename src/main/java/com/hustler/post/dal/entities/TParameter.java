@@ -4,12 +4,18 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.io.Serializable;
 import java.time.Instant;
 
+@Getter
+@Setter
 @Entity
+@Table(name = "t_parameters")
 public class TParameter implements Serializable {
+    private static final long serialVersionUID = 1030760737791099625L;
     @Id
     @Column(name = "str_key", nullable = false)
     private String strKey;
@@ -25,45 +31,5 @@ public class TParameter implements Serializable {
 
     @Column(name = "b_active")
     private Boolean bActive;
-
-    public String getStrKey() {
-        return strKey;
-    }
-
-    public void setStrKey(String strKey) {
-        this.strKey = strKey;
-    }
-
-    public String getStrValue() {
-        return strValue;
-    }
-
-    public void setStrValue(String strValue) {
-        this.strValue = strValue;
-    }
-
-    public Boolean getBEncrypted() {
-        return bEncrypted;
-    }
-
-    public void setBEncrypted(Boolean bEncrypted) {
-        this.bEncrypted = bEncrypted;
-    }
-
-    public Instant getDtCreatedAt() {
-        return dtCreatedAt;
-    }
-
-    public void setDtCreatedAt(Instant dtCreatedAt) {
-        this.dtCreatedAt = dtCreatedAt;
-    }
-
-    public Boolean getBActive() {
-        return bActive;
-    }
-
-    public void setBActive(Boolean bActive) {
-        this.bActive = bActive;
-    }
 
 }

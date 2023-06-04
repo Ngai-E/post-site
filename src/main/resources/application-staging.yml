@@ -1,0 +1,10 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        password: dc9db034
+        url: jdbc:mysql://us-cdbr-east-06.cleardb.net/heroku_74653c0cf1515a8?reconnect=true
+        username: b37a98a4904dc5
+    devtools:
+        add-properties: false
+server:
+    port: ${PORT:8080}
